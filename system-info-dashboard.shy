@@ -1,0 +1,34 @@
+#!/bin/bash
+
+while true; do
+    echo "1) Show system info"
+    echo "2) Disk usage"
+    echo "3) Memory usage"
+    echo "4) Users"
+    echo "5) CPU monitor"
+    echo "6) CPU usage"
+    echo "7) clear screen"
+    echo "8) Exit"
+
+    read -p "Chose:" choice
+
+system_info=$(uname -a)
+disk_usage=$(df -h)
+memory_usage=$(free)
+show_users=$(who)
+cpu_monitor=$(uptime)
+cpu_usage=$()
+clear_screen=$(clear)
+
+case $choice in
+        1)echo "$system_info" ;;
+        2)echo "$disk_usage" ;; 
+        3)echo "$memory_usage" ;;
+        4)echo "$show_users" ;;
+        5)echo "$cpu_monitor" ;;
+        6)echo "$cpu_usage" ;;
+        7)echo "$clear_screen" ;;
+        8)exit 0;;
+        *)echo "Invalid option" ;;
+esac 
+  done
